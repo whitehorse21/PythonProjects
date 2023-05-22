@@ -1,0 +1,119 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load tz %}
+{% block page_specific_css_js %}
+	<script type="text/javascript" src="{% static "DataTables/datatables.js" %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static "DataTables/datatables.css" %}"/>
+
+{% endblock %}
+{% block page_specific_js %}
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('.message').hide();
+
+		$('#entity_type').dropdown();
+		$('#refresh').popup();
+		$('#logout').popup();
+
+		$("#ajax_indicator").hide();
+
+		$(document).ajaxStart(function(){
+		$("#ajax_indicator").show();
+		});
+
+		$(document).ajaxStop(function(){
+			$("#ajax_indicator").hide();
+		});
+
+		var table = $('#shipment_table').DataTable({
+		fixedHeader: true,
+		"lengthChange": false,
+		"pageLength": 10,
+		"order": [],
+		language:{
+		"sProcessing":     "Procesando...",
+		"sLengthMenu":     "Mostrar _MENU_ registros",
+		"sZeroRecords":    "No se encontraron resultados",
+		"sEmptyTable":     "Ningún dato disponible en esta tabla =(",
+		"sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+		"sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+		"sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+		"sInfoPostFix":    "",
+		"sSearch":         "Buscar:",
+		"sUrl":            "",
+		"sInfoThousands":  ",",
+		"sLoadingRecords": "Cargando...",
+		"oPaginate":
+		{
+			"sFirst":    "Primero",
+			"sLast":     "Último",
+			"sNext":     "Siguiente",
+			"sPrevious": "Anterior"
+		},
+		"oAria":
+		{
+			"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+			"sSortDescending": ": Activar para ordenar la columna de manera descendente"
+		},
+		"buttons":
+		{
+			"copy": "Copiar",
+			"colvis": "Visibilidad"
+		}
+		}});
+
+		//table.buttons().container().appendTo( $('div.fifteen.column:eq(0)', table.table().container()));
+
+		//$('button.buttons-excel').addClass("ui link icon button");
+
+		//$('.buttons-excel').attr("data-content","Exportar a Excel");
+		//$('button.buttons-excel').html("<i class='file large excel black icon'></i>");
+		//$('span.ui.input').append("<i class='search black icon'></i>");
+		//$('span.ui.input').addClass('icon');
+
+	});//End of Document.Ready
+
+</script>
+{% endblock %}
+{% block body_block %}
+<h3 class="ui centered header">Consulta - Encargos</h3>
+<div class="ui centered grid">
+	<div class="fifteen wide column">
+		<table id = "shipment_table" class="ui single line celled striped black center aligned compact table">
+			<thead>
+
+				<tr class="center aligned">
+					<th class="two wide">Nro. Encargo</th>
+					<th class="two wide">Ubicación Actual</th>
+					<th class="two wide">Ubicación Despacho Final</th>
+					<th class="two wide">Transpaleta</th>
+					<th class="two wide">Recibido</th>
+					<th class="two wide">Clasificado</th>
+					<th class="two wide">Ubicado en Rampa</th>
+					<th class="two wide">Despachado</th>
+                    <th class="two wide">Fecha Creacion</th>
+                    <th class="two wide">Fecha Modificacion</th>
+				</tr>
+			</thead>
+            <tbody>
+                {% for shipment_object in object_list %}
+                  <tr class="center aligned">
+
+                    <td class="center aligned">{{shipment_object.shipment_nbr}}</td>
+					<td class="center aligned">{{shipment_object.current_location.dsp_locn}}</td>
+					<td class="center aligned">{{shipment_object.final_despatch_ramp_location.dsp_locn}}</td>
+					<td class="center aligned">{{shipment_object.pallet_jack.pallet_jack_id}}</td>
+					<td class="center aligned">{{shipment_object.received_at|date:"d/m/Y H:i:s"}}</td>
+                    <td class="center aligned">{{shipment_object.classified_at|date:"d/m/Y H:i:s"}}</td>
+					<td class="center aligned">{{shipment_object.palletized_at|date:"d/m/Y H:i:s"}}</td>
+                    <td class="center aligned">{{shipment_object.located_at|date:"d/m/Y H:i:s"}}</td>
+					<td class="center aligned">{{shipment_object.create_date_time|date:"d/m/Y H:i:s"}}</td>
+                    <td class="center aligned">{{shipment_object.mod_date_time|date:"d/m/Y H:i:s"}}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}

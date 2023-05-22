@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block title %}Starken Mimansa Apps{% endblock %}</title>
+    {% block css_js_inclusion_block %}
+        <script type="text/javascript" src="{% static "jquery/jquery-3.6.1.min.js" %}"></script>
+        <script type="text/javascript" src="{% static "jquery-ui-1.13.2/jquery-ui.min.js" %}"></script>
+        <script type="text/javascript" src="{% static "semantic/semantic.min.js" %}"></script>
+        <link href="{% static "semantic/semantic.min.css" %}" rel="stylesheet">
+    {% endblock %}
+
+    {% block page_specific_css_js %}
+    {% endblock %}
+
+    <script>
+      message_dictionary={};
+      {% if message_list %}
+        message_dictionary={};
+        {% autoescape off %}
+          {% for message_list_item in message_list %}
+            message_dictionary["{{message_list_item.message_key}}"]={"message_type":"{{message_list_item.message_type}}","message_text":String("{{message_list_item.message_text}}")};
+          {% endfor %}
+        {% endautoescape %}
+      {% endif %}
+
+      $(document).ready(function()
+      {
+        $('.loader').hide();
+
+		$(document).ajaxStart(function()
+		{
+			$('.loader').show();
+		});
+
+		$(document).ajaxStop(function()
+		{
+			$('.loader').hide();
+		});
+
+        {% if error_message%}
+          $(function()
+          {
+            $("#dialog").dialog({title:"{{error_message.1}}",minWidth: 500,modal:true, buttons: [{text: "Ok",click: function() {$( this ).dialog( "close" );}}]});
+          });
+        {% endif %}
+      });
+    </script>
+
+    {% block page_specific_js %}
+    {% endblock %}
+</head>
+<body>
+  {% block version_title_block %}
+  <h5></h5>
+  <h2 class="ui centered header">Starken Mimansa Apps v1.2</h2>
+  {% endblock version_title_block %}
+{% block menu_block %}
+    <div id="dialog">{% if error_message %}{{error_message.0}}{% endif %}</div>
+    <div class="ui centered grid">
+      <div class="fifteen wide column">
+        <div class="ui eight item large inverted menu">
+          <a class="item" href="{% url 'index' %}"><i class="large home icon"></i></a>
+          <div class="ui simple dropdown item">Maestros
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <a class="item" href="{% url 'locn_list' %}">Maestro - Ubicaciónes</a>
+              <div class="ui horizontal divider"></div>
+              <a class="item" href="{% url 'pallet_jack_list' %}">Maestro - Transpaletas</a>
+            </div>
+          </div>
+          <a class="item" href="{% url 'shipment_list' %}"">Consulta - Encargos</a>
+
+          <a class="item" href="{% url 'index' %}"><i class="large sign out icon"></i></a>
+        </div>
+      </div>
+    </div>
+{% endblock menu_block %}
+{% block body_block %}
+{% endblock body_block %}
+</body>
+</html>

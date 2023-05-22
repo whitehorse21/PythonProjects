@@ -1,0 +1,9 @@
+doc/
+env/
+temp.html
+frontend/node_modules/
+PackFromTote/node_modules/
+build
+.env
+*.log
+

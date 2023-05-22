@@ -1,0 +1,67 @@
+{
+  "name": "frontend",
+  "homepage": "/pack_from_tote/",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@headlessui/react": "^1.2.0",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.58",
+    "@material-ui/styles": "^4.11.5",
+    "@szhsin/react-menu": "^1.10.1",
+    "@tanstack/match-sorter-utils": "^8.8.4",
+    "@tanstack/react-table": "^8.8.5",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
+    "create-react-app": "^4.0.3",
+    "env-cmd": "^10.1.0",
+    "jsrsasign": "^10.3.0",
+    "material-ui-confirm": "^2.1.2",
+    "qz-tray": "^2.1.3",
+    "react": "^17.0.2",
+    "react-data-table-component": "^7.5.3",
+    "react-data-table-component-extensions": "^1.6.0",
+    "react-dom": "^17.0.2",
+    "react-final-form": "^6.5.3",
+    "react-image-gallery": "^1.2.11",
+    "react-loading-overlay": "^1.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-select": "2.4.3",
+    "react-spinners": "^0.10.6",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.3",
+    "sheetjs-style": "^0.15.8",
+    "styled-components": "^5.3.10",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:ripley:qa": "env-cmd -f .env.ripley.qa react-scripts build",
+    "build:ripley:prod": "env-cmd -f .env.ripley.prod react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+[
+{
+    "model": "base.palletjackmaster",
+    "pk": 1,
+    "fields": {
+        "pallet_jack_id": "TRASPALETA_1",
+        "pallet_jack_brcd": "00I3465DN2",
+        "status": 0,
+        "create_date_time": "2022-11-09T18:07:32.615Z",
+        "mod_date_time": "2022-11-09T18:07:32.615Z"
+    }
+},
+{
+    "model": "base.palletjackmaster",
+    "pk": 2,
+    "fields": {
+        "pallet_jack_id": "TRASPALETA_2",
+        "pallet_jack_brcd": "010T9D2ZFW",
+        "status": 0,
+        "create_date_time": "2022-11-09T18:07:32.619Z",
+        "mod_date_time": "2022-11-09T18:07:32.619Z"
+    }
+},
+{
+    "model": "base.palletjackmaster",
+    "pk": 3,
+    "fields": {
+        "pallet_jack_id": "TRASPALETA_3",
+        "pallet_jack_brcd": "01N88WX5WD",
+        "status": 0,
+        "create_date_time": "2022-11-09T18:07:32.620Z",
+        "mod_date_time": "2022-11-09T18:07:32.620Z"
+    }
+},
+{
+    "model": "base.palletjackmaster",
+    "pk": 4,
+    "fields": {
+        "pallet_jack_id": "TRASPALETA_4",
+        "pallet_jack_brcd": "01U4C8DDBA",
+        "status": 0,
+        "create_date_time": "2022-11-09T18:07:32.621Z",
+        "mod_date_time": "2022-11-09T18:07:32.621Z"
+    }
+},
+{
+    "model": "base.palletjackmaster",
+    "pk": 5,
+    "fields": {
+        "pallet_jack_id": "TRASPALETA_5",
+        "pallet_jack_brcd": "02RFYZQNIK",
+        "status": 0,
+        "create_date_time": "2022-11-09T18:07:32.622Z",
+        "mod_date_time": "2022-11-09T18:07:32.622Z"
+    }
+},
+{
+    "model": "base.palletjackmaster",
+    "pk": 6,
+    "fields": {
+        "pallet_jack_id": "TRASPALETA_6",
+        "pallet_jack_brcd": "03F1HFK0JE",
+        "status": 0,
+        "create_date_time": "2022-11-09T18:07:32.624Z",
+        "mod_date_time": "2022-11-09T18:07:32.624Z"
+    }
+},
+{
+    "model": "base.palletjackmaster",
+    "pk": 7,
+    "fields": {
+        "pallet_jack_id": "TRASPALETA_7",
+        "pallet_jack_brcd": "040SYN9J6C",
+        "status": 0,
+        "create_date_time": "2022-11-09T18:07:32.625Z",
+        "mod_date_time": "2022-11-09T18:07:32.625Z"
+    }
+},
+{
+    "model": "base.palletjackmaster",
+    "pk": 8,
+    "fields": {
+        "pallet_jack_id": "TRASPALETA_8",
+        "pallet_jack_brcd": "0682CQDDFD",
+        "status": 0,
+        "create_date_time": "2022-11-09T18:07:32.626Z",
+        "mod_date_time": "2022-11-09T18:07:32.626Z"
+    }
+},
+{
+    "model": "base.palletjackmaster",
+    "pk": 9,
+    "fields": {
+        "pallet_jack_id": "TRASPALETA_9",
+        "pallet_jack_brcd": "0841ADOFFZ",
+        "status": 0,
+        "create_date_time": "2022-11-09T18:07:32.627Z",
+        "mod_date_time": "2022-11-09T18:07:32.627Z"
+    }
+},
+{
+    "model": "base.palletjackmaster",
+    "pk": 10,
+    "fields": {
+        "pallet_jack_id": "TRASPALETA_10",
+        "pallet_jack_brcd": "08C67F656J",
+        "status": 0,
+        "create_date_time": "2022-11-09T18:07:32.628Z",
+        "mod_date_time": "2022-11-09T18:07:32.628Z"
+    }
+}
+]

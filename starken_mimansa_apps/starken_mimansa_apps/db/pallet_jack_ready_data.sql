@@ -1,0 +1,10 @@
+INSERT INTO PALLET_JACK_MASTER (PALLET_JACK_ID, pallet_jack_brcd, status, create_date_time, mod_date_time) VALUES('TPLTA_1','00I3465DN2', 0 , now(), now());
+INSERT INTO PALLET_JACK_MASTER (PALLET_JACK_ID, pallet_jack_brcd, status, create_date_time, mod_date_time) VALUES('TPLTA_2','010T9D2ZFW', 0 , now(), now());
+INSERT INTO PALLET_JACK_MASTER (PALLET_JACK_ID, pallet_jack_brcd, status, create_date_time, mod_date_time) VALUES('TPLTA_3','01N88WX5WD', 0 , now(), now());
+INSERT INTO PALLET_JACK_MASTER (PALLET_JACK_ID, pallet_jack_brcd, status, create_date_time, mod_date_time) VALUES('TPLTA_4','01U4C8DDBA', 0 , now(), now());
+INSERT INTO PALLET_JACK_MASTER (PALLET_JACK_ID, pallet_jack_brcd, status, create_date_time, mod_date_time) VALUES('TPLTA_5','02RFYZQNIK', 0 , now(), now());
+INSERT INTO PALLET_JACK_MASTER (PALLET_JACK_ID, pallet_jack_brcd, status, create_date_time, mod_date_time) VALUES('TPLTA_6','03F1HFK0JE', 0 , now(), now());
+INSERT INTO PALLET_JACK_MASTER (PALLET_JACK_ID, pallet_jack_brcd, status, create_date_time, mod_date_time) VALUES('TPLTA_7','040SYN9J6C', 0 , now(), now());
+INSERT INTO PALLET_JACK_MASTER (PALLET_JACK_ID, pallet_jack_brcd, status, create_date_time, mod_date_time) VALUES('TPLTA_8','0682CQDDFD', 0 , now(), now());
+INSERT INTO PALLET_JACK_MASTER (PALLET_JACK_ID, pallet_jack_brcd, status, create_date_time, mod_date_time) VALUES('TPLTA_9','0841ADOFFZ', 0 , now(), now());
+INSERT INTO PALLET_JACK_MASTER (PALLET_JACK_ID, pallet_jack_brcd, status, create_date_time, mod_date_time) VALUES('TPLTA_10','08C67F656J', 0 , now(), now());

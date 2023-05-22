@@ -1,0 +1,8 @@
+doc/
+env/
+temp.html
+frontend/node_modules/
+build
+.env
+*.log
+

@@ -1,0 +1,16 @@
+{
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  "python.formatting.provider": "none",
+  "python.autoComplete.extraPaths": [],
+  "python.pythonPath": "/opt/app/virtual/starken_mimansa_apps/bin/python",
+  "python.linting.pylintPath": "/opt/app/virtual/starken_mimansa_apps/bin/pylint",
+  "python.analysis.extraPaths": [],
+  "python.linting.pylintArgs": [
+    "--load-plugins=pylint_django",
+    "--django-settings-module=starken_mimansa_apps.settings"
+  ],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  }
+}
